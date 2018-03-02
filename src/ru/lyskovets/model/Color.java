@@ -1,18 +1,16 @@
 package ru.lyskovets.model;
 
 public enum Color {
-    RED, YELLOW, GREEN;
+    RED("Красный"), YELLOW("Жёлтый"), GREEN("Зелёный");
+
+    private String title;
+
+    Color(String title) {
+        this.title = title;
+    }
 
     @Override
     public String toString() {
-        switch (this) {
-            case RED:
-                return "Красный";
-            case YELLOW:
-                return "Жёлтый";
-            case GREEN:
-                return "Зелёный";
-        }
-        return null; // unreachable but necessarily
+        return title;
     }
 }
